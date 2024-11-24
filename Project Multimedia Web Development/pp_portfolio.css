@@ -1,0 +1,165 @@
+/* Styles for screens smaller than or equal to 400px wide */
+
+body {
+   min-width: 140px;
+   background-color: yellowgreen;
+   border: black 2px solid;
+}
+
+section#main {
+   display: flex;
+   flex-wrap: wrap;
+   width: 90%;
+   justify-content: center;
+   /* justify-content: space-around; */
+   margin: auto;
+   
+}
+*{
+   box-sizing: border-box;
+}
+img {
+   max-width:1000px;
+    max-height: 920px;
+   flex-basis: 250px;
+   flex-grow: 1;
+   flex-shrink: 1;
+   padding: 1%;
+   vertical-align: middle;
+   text-align: center;
+   
+} 
+#header_title {
+   text-align: center;
+   font-size: 2em;
+   color: white;
+   text-shadow: 5px 5px 5px black;
+   padding: 50px 10px;
+   background-image: url(Header_music.jpg);
+   background-size: cover;
+}
+nav.horizontalNavigation li {
+   width: 20%;
+   float: left;
+   font-size: 0.8em;
+   color: black;
+}
+nav.horizontalNavigation a {
+   background-color: rgb(24 25 26);
+}
+.horizontalNavigation a {
+   display: block;
+   text-align: center;
+}
+footer {
+   background-color: yellowgreen;
+   clear: left;
+}
+footer>nav.verticalNavigation {
+   float: left;
+   width: 22%;
+   color: black;
+   
+}
+footer>section#contactInfo {
+   float: left;
+   width: 34%;
+   color: black;
+}
+body>footer h1{
+   color: black;
+}
+nav.verticalNavigation a:link, nav.verticalNavigation a:visited {
+   color: black;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h2, h3, h4, h5, h6, header, html, img, li, main, nav, ol, p, section, span, ul {
+   background: yellowgreen;
+}
+@media (min-width: 901px) {}
+
+img {
+   vertical-align: middle;
+ }
+ 
+ /* Position the image container (needed to position the left and right arrows) */
+ .container {
+   position: relative;
+ }
+ 
+ /* Hide the images by default */
+ .mySlides {
+   display: none;
+ }
+ 
+ /* Add a pointer when hovering over the thumbnail images */
+ .cursor {
+   cursor: pointer;
+ }
+ 
+ /* Next & previous buttons */
+ .prev,
+ .next {
+   cursor: pointer;
+   position: absolute;
+   top: 40%;
+   width: auto;
+   padding: 16px;
+   margin-top: -50px;
+   color: white;
+   font-weight: bold;
+   font-size: 20px;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+   -webkit-user-select: none;
+ }
+ 
+ /* Position the "next button" to the right */
+ .next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+ }
+ 
+ /* On hover, add a black background color with a little bit see-through */
+ .prev:hover,
+ .next:hover {
+   background-color: rgba(0, 0, 0, 0.8);
+ }
+ 
+ /* Number text (1/3 etc) */
+ .numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+ }
+ 
+ /* Container for image text */
+ .caption-container {
+   text-align: center;
+   background-color: #222;
+   padding: 2px 16px;
+   color: white;
+ }
+ 
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ 
+ /* Six columns side by side */
+ .column {
+   float: left;
+   width: 16.66%;
+ }
+ 
+ /* Add a transparency effect for thumnbail images */
+ .demo {
+   opacity: 0.6;
+ }
+ 
+ .active,
+ .demo:hover {
+   opacity: 1;
+ }

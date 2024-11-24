@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  -->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="chocolate, chocolatier, cocoa, cacao, desserts" />
+   <title>Tinkle's Music Store</title>
+   <link href="pp_reset.css" rel="stylesheet" />
+   <link href="pp_styles1.css" rel="stylesheet" />
+   <link rel="stylesheet" href="pp_portfolio.css">
+   <style>
+      body > p{
+         text-align: center;
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <div id="header_title"><h1>Tinkle's Music</h1></div>
+
+      <!-- <img src="https://picsum.photos/200/50" alt="Pandaisia Chocolates" /> -->
+      <nav class="horizontalNavigation">
+         <ul>
+            <li><a href="pp_home.html">HOME</a></li>
+            <li><a href="pp_portfolio.html">PRODUCTS</a></li>
+            <li><a href="sign_in.html">SIGN IN</a></li>
+            <li><a href="CreateAccount.html">CREATE ACCOUNT</a></li>
+            <li><a href="pp_contact.html">CONTACT US</a></li>
+         </ul>
+      </nav>
+   </header>
+   <section id="main"><br><br>
+      <div class="container">
+         <div class="mySlides">
+           <div class="numbertext">1 / 6</div>
+           <img src="Trumpet.webp" style="width:100%" height="80%">
+         </div>
+       
+         <div class="mySlides">
+           <div class="numbertext">2 / 6</div>
+           <img src="Tabla.jpg" style="width:100%">
+         </div>
+       
+         <div class="mySlides">
+           <div class="numbertext">3 / 6</div>
+           <img src="French Horn.jfif" style="width:100%">
+         </div>
+           
+         <div class="mySlides">
+           <div class="numbertext">4 / 6</div>
+           <img src="Harmonium.jpg" style="width:100%">
+         </div>
+       
+         <div class="mySlides">
+           <div class="numbertext">5 / 6</div>
+           <img src="Banjo.jfif" style="width:100%">
+         </div>
+           
+         <div class="mySlides">
+           <div class="numbertext">6 / 6</div>
+           <img src="Accordion.jfif" style="width:100%">
+         </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+      <div class="row">
+         <div class="column">
+           <img class="demo cursor" src="Trumpet.webp" style="width:100%" onclick="currentSlide(1)" alt="">
+         </div>
+         <div class="column">
+           <img class="demo cursor" src="Tabla.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+         </div>
+         <div class="column">
+           <img class="demo cursor" src="French Horn.jfif" style="width:100%" onclick="currentSlide(3)" alt="">
+         </div>
+         <div class="column">
+           <img class="demo cursor" src="Harmonium.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+         </div>
+         <div class="column">
+           <img class="demo cursor" src="Banjo.jfif" style="width:100%" onclick="currentSlide(5)" alt="">
+         </div>    
+         <div class="column">
+           <img class="demo cursor" src="Accordion.jfif" style="width:100%" onclick="currentSlide(6)" alt="">
+         </div>
+       </div>
+     </div>
+      <script>
+         let slideIndex = 1;
+         showSlides(slideIndex);
+         
+         function plusSlides(n) {
+           showSlides(slideIndex += n);
+         }
+         
+         function currentSlide(n) {
+           showSlides(slideIndex = n);
+         }
+         
+         function showSlides(n) {
+           let i;
+           let slides = document.getElementsByClassName("mySlides");
+           let dots = document.getElementsByClassName("demo");
+           let captionText = document.getElementById("caption");
+           if (n > slides.length) {slideIndex = 1}
+           if (n < 1) {slideIndex = slides.length}
+           for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+           }
+           for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" active", "");
+           }
+           slides[slideIndex-1].style.display = "block";
+           dots[slideIndex-1].className += " active";
+           captionText.innerHTML = dots[slideIndex-1].alt;
+         }
+         </script>
+   </section>
+
+   <footer>
+      <nav class="verticalNavigation">
+         <h1>Sales & Events</h1>
+         <ul>
+            <li><a href="#">Most Recent</a></li>
+            <li><a href="#">Customer Reviews</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">News</a></li>
+         </ul>
+      </nav>
+      <nav class="verticalNavigation">
+         <h1>Social Media</h1>
+         <ul>
+            <li><a href="#"><img src="twittericon.png" alt="" />Twitter</a></li>
+            <li><a href="#"><img src="linkedinicon.png" alt="" />LinkedIn</a></li>
+            <li><a href="#"><img src="fbicon.png" alt="" />Instagram</a></li>
+         </ul>
+      </nav>
+      <nav class="verticalNavigation">
+         <h1>Services</h1>
+         <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Music Courses</a></li>
+            <li><a href="#">Repairs</a></li>
+            <li><a href="#">Order & Returns</a></li>
+            <li><a href="#">Financing</a></li>
+         </ul>
+      </nav>
+      <section id="contactInfo">
+         <h1>Location &amp; Contacts</h1>
+         <p>Royal Avenue</p>
+         <p>New Westminster</p>
+         <p>Customer Service: 1-800-123-4567</p>
+      </section>
+   </footer>
+   <p><br>Copyright 2024<br></p>
+</body>
+
+</html>
